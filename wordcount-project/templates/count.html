@@ -1,0 +1,17 @@
+<h1>Result</h1>
+Number of words: {{ number_of_words }}
+<br/>
+<a href="{% url 'home' %}">Start Again</a>
+<br>
+Your text: {{ text }}
+<br>
+
+<table>
+{% for word, count_total in word_count %}
+    <tr>
+        <td>{{ word }}</td>
+        <td>{{ count_total }}</td>
+    </tr>
+
+{% endfor %}
+</table>
